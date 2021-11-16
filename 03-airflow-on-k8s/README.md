@@ -15,7 +15,7 @@
 4. Setup New Namespace
 5. Setup Helm Chart
 6. Check Airflow Status
-7. [TODO] Prometheus Monitor
-8. [TODO] Grafana Dashboard
+7. Prometheus Monitor
+8. Grafana Dashboard
 9. [TODO] Airflow Test Environment
 10.[TODO] Customize Airflow Interface
