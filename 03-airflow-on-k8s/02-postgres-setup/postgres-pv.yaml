@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: postgres-pv
+spec:
+  capacity:
+    storage: 10Gi 
+  storageClassName: nfs
+  accessModes:
+  - ReadWriteOnce 
+  nfs: 
+    path: /k8s/d1/postgres
+    server: 192.168.50.204
+  persistentVolumeReclaimPolicy: Retain 

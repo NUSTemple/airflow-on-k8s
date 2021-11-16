@@ -1,0 +1,83 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: redis-pv1
+spec:
+  capacity:
+    storage: 200M
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 192.168.50.204
+    path: "/k8s/d1/redis/pv1"
+  persistentVolumeReclaimPolicy: Delete 
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: redis-pv2
+spec:
+  capacity:
+    storage: 200M
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 192.168.50.204
+    path: "/k8s/d1/redis/pv2"
+  persistentVolumeReclaimPolicy: Delete 
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: redis-pv3
+spec:
+  capacity:
+    storage: 200M
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 192.168.50.204
+    path: "/k8s/d1/redis/pv3"
+  persistentVolumeReclaimPolicy: Delete 
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: redis-pv4
+spec:
+  capacity:
+    storage: 200M
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 192.168.50.204
+    path: "/k8s/d1/redis/pv4"
+  persistentVolumeReclaimPolicy: Delete 
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: redis-pv5
+spec:
+  capacity:
+    storage: 200M
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 192.168.50.204
+    path: "/k8s/d1/redis/pv5"
+  persistentVolumeReclaimPolicy: Delete 
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: redis-pv6
+spec:
+  capacity:
+    storage: 200M
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 192.168.50.204
+    path: "/k8s/d1/redis/pv6"
+  persistentVolumeReclaimPolicy: Delete 

@@ -1,0 +1,26 @@
+# Reference https://gist.github.com/jeroenr/2d9e62734a541af6821fdd603e0945b9
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: statsd-exporter
+  namespace: airflow
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: statsd-exporter
+  template:
+    metadata:
+      labels:
+        app: statsd-exporter
+    spec:
+      containers:
+      - name: statsd-exporter
+        image: prom/statsd-exporter
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9102
+        - containerPort: 9125
+        args: [
+        ]
+        resources: {}

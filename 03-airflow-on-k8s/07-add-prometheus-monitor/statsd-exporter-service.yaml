@@ -1,0 +1,20 @@
+# Reference https://gist.github.com/jeroenr/2d9e62734a541af6821fdd603e0945b9
+apiVersion: v1
+kind: Service
+metadata:
+  name: statsd-exporter-svc
+  namespace: airflow
+  labels:
+    app: statsd-exporter
+spec:
+  ports:
+  - name: udp
+    port: 8125 #port to push metrics to
+    protocol: UDP
+    targetPort: 9125
+  - name: tcp
+    port: 9102 #port to fetch metrics from
+    protocol: TCP
+    targetPort: 9102
+  selector:
+    app: statsd-exporter
